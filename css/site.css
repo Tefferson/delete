@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+.title {
+  color: #03a9f4;
+  font-family: arial;
+  font-size: 24pt;
+  line-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
