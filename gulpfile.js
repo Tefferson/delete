@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var autoprefixer = require('gulp-autoprefixer');
 var version = require('gulp-version-number');
+var cleanCSS = require('gulp-clean-css');
 
 function BuildConfiguration(filePaths, folderDist, compiledFileName) {
     this.src = filePaths;
@@ -25,6 +26,7 @@ gulp.task('style', function () {
   return gulp.src('stylus/site.styl')
     .pipe(stylus())
     .pipe(autoprefixer())
+	.pipe(cleanCSS())
     .pipe(gulp.dest('css'));
 });
 
