@@ -17,7 +17,6 @@ var path = '*.html';
 var config = {
     'replaces':
         [
-            [/\.js(\?\d+)?/g, '.js?' + Math.floor(Math.random() * 1000)],
             [/\.css(?!\()(\?\d+)?/g, '.css?' + Math.floor(Math.random() * 1000)]
         ]
 };
