@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#03A9F4">
   <title>Tefferson</title>
-  <link rel="stylesheet" href="css/site.css?757" />
-  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="css/site.css?899" />
+  <link rel="manifest" href="/manifest.json?899">
 </head>
 
 <body>
   <h2 class="title">Tefferson</h2>
+  <script>
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker
+				 .register('/sw.js')
+				 .then(function() {
+					console.log("Service Worker Registered");
+				 });
+	}
+  </script>
 </body>
 
 </html>
