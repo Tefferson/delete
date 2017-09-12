@@ -22,21 +22,21 @@ var config = {
 };
 
 gulp.task('style', function () {
-  return gulp.src('stylus/site.styl')
+  return gulp.src('assets/css/styles.styl')
     .pipe(stylus())
     .pipe(autoprefixer())
-	.pipe(cleanCSS())
-    .pipe(gulp.dest('css'));
+	  .pipe(cleanCSS())
+    .pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('version-number', function () {
-  return gulp.src(path, { base: '' })            
+  return gulp.src(path, { base: '' })
     .pipe(version(config))
     .pipe(gulp.dest(''));
 });
 
 gulp.task('watch', function () {
-	var config = new BuildConfiguration(['stylus/*.styl'], 'css', 'site.css');
+	var config = new BuildConfiguration(['assets/css/*.styl'], 'assets/css', 'assets/css/styles.css');
     gulp.watch(config.src, ['style']);
 });
 
