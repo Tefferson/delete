@@ -10,3 +10,8 @@ app.config(function($routeProvider) {
     })
     .otherwise({ redirectTo: '/main' });
 });
+
+app.constant('routes', {
+  main: '/main',
+  test: '/test'
+});
