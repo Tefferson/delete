@@ -1,10 +1,5 @@
 <div ng-controller="mainController" ng-init="init()">
   <main-header></main-header>
-  <section>
-    <div ng-repeat="item in list">
-      <div ng-click="navigateTo(item.url)">
-        {{item.title}}
-      </div>
-    </div>
-  </section>
+  <br />
+  <card-list list="list"></card-list>
 </div>

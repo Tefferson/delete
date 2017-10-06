@@ -46,7 +46,7 @@ gulp.task('uglify', function() {
     }))
     .pipe(gulp.dest('dist'))
 
-  gulp.src('app/*.js')
+  gulp.src(['app/module.js', 'app/*.js'])
     .pipe(concat('module.js'))
     .pipe(uglify({
       mangle: false

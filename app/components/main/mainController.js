@@ -1,9 +1,5 @@
-app.controller('mainController', function($scope, menuItemService, navigationService) {
+app.controller('mainController', function($scope, menuItemService) {
   $scope.list = [];
-
-  $scope.navigateTo = function(url) {
-    navigationService.goToTest();
-  };
 
   $scope.init = function() {
     menuItemService

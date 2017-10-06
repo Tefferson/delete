@@ -14,6 +14,7 @@ app.factory('navigationService', function($location, routes) {
 
   return {
     goToMain: goToMain,
-    goToTest: goToTest
+    goToTest: goToTest,
+    goTo: goTo
   };
 });
