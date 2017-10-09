@@ -34,26 +34,12 @@ gulp.task('version-number', function() {
   return gulp.src(path, {
       base: ''
     })
-    .pipe(version(config))
+    //.pipe(version(config))
     .pipe(gulp.dest(''));
 });
 
 gulp.task('uglify', function() {
-  gulp.src('assets/libs/*/*.js')
-    .pipe(concat('libs.js'))
-    .pipe(uglify({
-      mangle: false
-    }))
-    .pipe(gulp.dest('dist'))
-
-  gulp.src(['app/module.js', 'app/*.js'])
-    .pipe(concat('module.js'))
-    .pipe(uglify({
-      mangle: false
-    }))
-    .pipe(gulp.dest('dist'))
-
-  gulp.src(['app/*/*/*.js', 'app/*/*/*/*.js'])
+  gulp.src(['assets/libs/*/*.js', 'app/module.js', 'app/*.js', 'app/*/*/*.js', 'app/*/*/*/*.js'])
     .pipe(concat('scripts.js'))
     .pipe(uglify({
       mangle: false

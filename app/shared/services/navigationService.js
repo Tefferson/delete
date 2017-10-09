@@ -1,4 +1,4 @@
-app.factory('navigationService', function($location, routes) {
+app.service('navigationService', function($location, routes) {
 
   function goTo(url) {
     $location.path(url);
@@ -12,9 +12,7 @@ app.factory('navigationService', function($location, routes) {
     goTo(routes.test);
   }
 
-  return {
-    goToMain: goToMain,
-    goToTest: goToTest,
-    goTo: goTo
-  };
+  this.goToMain = goToMain;
+  this.goToTest = goToTest;
+  this.goTo = goTo;
 });

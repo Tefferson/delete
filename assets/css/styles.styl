@@ -1,5 +1,9 @@
+@font-face
+	font-family 'Arvo'
+	src url('../fonts/arvo.woff2')
+
 body
-	font-family arial
+	font-family arvo, arial
 	margin 0
 
 card-list
@@ -59,6 +63,21 @@ card-list-item
 		&:nth-child(3n + 2)
 			margin-right 3.5%
 
+language-selection
+	text-align center
+	& >
+		.container
+			& >
+				.icon
+					cursor pointer
+					margin-top 27px
+
+main-footer
+	& >
+		.container
+			background #1976D2
+			height 200px
+
 main-header
 	& >
 		.container
@@ -82,6 +101,47 @@ main-header
 					left 20px
 					position absolute
 					top 20px
+
+social-media
+	& >
+		.container
+			padding-top 10px
+			position relative
+			text-align center
+			& >
+				.follow-me
+					color white
+					font-weight bold
+					margin 15px 3px 10px
+				.icon
+					cursor pointer
+					margin 3px
+
+.icon
+	display inline-block
+	height 32px
+	width 32px
+	&.codepen
+		background-image url('../img/codepen.png')
+		border-radius 50%
+	&.fb
+		background-image url('../img/facebook.png')
+		border-radius 50%
+	&.github
+		background-image url('../img/github.png')
+		border-radius 50%
+	&.instagram
+		background-image url('../img/instagram.png')
+		border-radius 50%
+	&.language
+		background-image url('../img/language.png')
+		border-radius 50%
+	&.linkedin
+		background-image url('../img/linkedin.png')
+		border-radius 50%
+	&.twitter
+		background-image url('../img/twitter.png')
+		border-radius 50%
 
 .shadow
 	&.layer-1
